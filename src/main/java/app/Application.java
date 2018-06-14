@@ -3,10 +3,18 @@ package app;
 import app.models.Author;
 import app.models.Song;
 
+/**
+ * The Application program implements an application that
+ * creates a Song object from Song.class and an Author object from Author.class and displays in the console
+ * the provided functionality of their public methods.
+ */
 public class Application {
     public static void main(String[] args) {
 
-        Song song = new Song("Sweet Child O'Mine", "Rock", "5:12", "She's got a smile it seems to me\n" +
+        Song song = new Song("Sweet Child O'Mine",
+                "Rock",
+                "5:12",
+                "She's got a smile it seems to me\n" +
                 "Reminds me of childhood memories\n" +
                 "Where everything\n" +
                 "Was as fresh as the bright blue sky\n" +

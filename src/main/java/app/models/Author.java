@@ -6,6 +6,8 @@ package app.models;
  * information about the author, such as name and age, as well as information about a song he/she wrote.
  */
 public class Author {
+    private static final String CANNOT_BE_NULL_MESSAGE = "Null value impossible.";
+
     private String name;
     private int age;
     private Song song;
@@ -58,7 +60,11 @@ public class Author {
      * @param name String value to be set as the author's name.
      */
     private void setName(String name) {
-        this.name = name;
+        if (name == null) {
+            throw new IllegalArgumentException("Author name: " + CANNOT_BE_NULL_MESSAGE);
+        } else {
+            this.name = name;
+        }
     }
 
     /**

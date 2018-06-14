@@ -71,7 +71,7 @@ public class Application {
                 "Where do we go now?\n" +
                 "No, no, no, no, no, no\n" +
                 "Sweet child,\n" +
-                "Sweet child of mine");
+                "Sweet child of mine\n");
 
         Author author = new Author("Guns'n'Roses", 99, song);
 
@@ -80,8 +80,8 @@ public class Application {
         String testGenre = "Pop";
         System.out.printf("Is genre %s? - %s%n", testGenre, song.isSameGenre(testGenre));
 
-        System.out.println(song.getTiming());
-        System.out.println(song.getLyrics());
+        System.out.printf("Timing of the song: %s%n", song.getTiming());
+        System.out.printf("Lyrics of the song: %n%s%n", song.getLyrics());
 
         System.out.println(author.printAuthorInfo());
         System.out.println(author.printAuthorSong());

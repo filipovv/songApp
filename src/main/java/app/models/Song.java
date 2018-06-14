@@ -6,6 +6,8 @@ package app.models;
  * Via it's public methods one can access information about the song, such as title, genre, timing and lyrics.
  */
 public class Song {
+    private static final String CANNOT_BE_NULL_MESSAGE = "Null value impossible.";
+
     private String title;
     private String genre;
     private String timing;
@@ -65,7 +67,11 @@ public class Song {
      * @param title String value to be set as the song's title.
      */
     private void setTitle(String title) {
-        this.title = title;
+        if (title == null) {
+            throw new IllegalArgumentException("Song title: " + CANNOT_BE_NULL_MESSAGE);
+        } else {
+            this.title = title;
+        }
     }
 
     /**
@@ -83,7 +89,11 @@ public class Song {
      * @param genre String value to be set as the song's genre.
      */
     private void setGenre(String genre) {
-        this.genre = genre;
+        if (genre == null) {
+            throw new IllegalArgumentException("Song genre: " + CANNOT_BE_NULL_MESSAGE);
+        } else {
+            this.genre = genre;
+        }
     }
 
     /**
@@ -101,7 +111,11 @@ public class Song {
      * @param timing String value to be set as the timing of the song.
      */
     private void setTiming(String timing) {
-        this.timing = timing;
+        if (timing == null) {
+            throw new IllegalArgumentException("Song timing: " + CANNOT_BE_NULL_MESSAGE);
+        } else {
+            this.timing = timing;
+        }
     }
 
     /**
@@ -119,6 +133,10 @@ public class Song {
      * @param lyrics String value to be set as the lyrics of the song.
      */
     private void setLyrics(String lyrics) {
-        this.lyrics = lyrics;
+        if (lyrics == null) {
+            throw new IllegalArgumentException("Song lyrics: " + CANNOT_BE_NULL_MESSAGE);
+        } else {
+            this.lyrics = lyrics;
+        }
     }
 }
